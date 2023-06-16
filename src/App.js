@@ -1,10 +1,19 @@
 import React from "react";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router";
+import Orderform from "./pages/Orderform";
+import Finish from "./pages/Finish";
 
 const App = () => {
   return (
     <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
+    
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Order" element={<Orderform />} />
+      <Route path="*" element={<Finish/>} />
+    </Routes>
+      
     </>
   );
 };
